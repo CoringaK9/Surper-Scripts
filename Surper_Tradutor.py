@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# SUPER TRADUTOR DE JOGOS - v7 (Error Handling, Cache, Projects)
+# SURPER TRADUTOR DE JOGOS - v7 (Error Handling, Cache, Projects)
 
 # Desenvolvido para traduzir arquivos de texto de jogos com máxima precisão,
 # utilizando IA (Google Gemini), preservando códigos e estrutura.
@@ -79,7 +79,7 @@ PRO_MODEL = "gemini-1.5-pro"
 DEFAULT_DELAY = 3.0
 DEFAULT_MAX_TOKENS_PER_BLOCK = 1000 # Valor inicial, pode ser adaptativo
 HOME_DIR = os.path.expanduser("~")
-CONFIG_DIR = os.path.join(HOME_DIR, ".SuperScripts")
+CONFIG_DIR = os.path.join(HOME_DIR, ".SurperScripts")
 os.makedirs(CONFIG_DIR, exist_ok=True)
 CONFIG_FILE = os.path.join(CONFIG_DIR, "config.json")
 LOG_FILE = os.path.join(CONFIG_DIR, "error.log")
@@ -121,7 +121,7 @@ def mostrar_banner():
     """Exibe o banner do script."""
     print(f"""{COR_TITULO}
 ================================================================================
-    SUPER TRADUTOR DE JOGOS - v7 (Error Handling, Cache, Projects)
+    SURPER TRADUTOR DE JOGOS - v7 (Error Handling, Cache, Projects)
     Desenvolvido para traduzir arquivos de texto de jogos com máxima precisão
 ================================================================================{COR_RESET}""")
 
@@ -1596,7 +1596,7 @@ def menu_principal():
 # --- Execução Principal --- #
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Super Tradutor de Jogos v7 usando Google Gemini.")
+    parser = argparse.ArgumentParser(description="Surper Tradutor de Jogos v7 usando Google Gemini.")
     parser.add_argument("arquivo", nargs='?', help="Arquivo de texto original a ser traduzido.")
     parser.add_argument("-o", "--output", help="Arquivo de saída para a tradução.")
     parser.add_argument("-s", "--source-lang", default="Inglês", help="Idioma de origem (padrão: Inglês)")

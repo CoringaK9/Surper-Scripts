@@ -52,7 +52,7 @@ Ambos os scripts são otimizados para lidar com arquivos grandes, oferecem geren
 *   Traduz de um idioma de origem (padrão: Inglês) para um idioma de destino (padrão: Português Brasileiro).
 *   Foco na tradução precisa, mantendo a estrutura e adaptando ao contexto fornecido.
 
-**`super_revisor_v6.py` (Específico):**
+**`surper_revisor.py` (Específico):**
 
 *   Revisa um arquivo já traduzido (presumivelmente para Português Brasileiro).
 *   Oferece diferentes **Estilos de Revisão** pré-definidos para guiar a IA:
