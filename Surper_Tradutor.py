@@ -305,10 +305,10 @@ def gerenciar_api_keys():
 def configurar_gemini(api_key, modelo_nome=DEFAULT_MODEL):
     """Configura a API do Gemini com a chave fornecida."""
     try:
-        genai.configure(api_key=api_key)
+        genai.configure(api_key=api_key) # type: ignore
         # Verifica se o modelo existe (opcional, mas bom para feedback rápido)
         # model_info = genai.get_model(f"models/{modelo_nome}") # Pode causar erro se a chave for inválida
-        modelo = genai.GenerativeModel(modelo_nome)
+        modelo = genai.GenerativeModel(modelo_nome) # type: ignore
         mostrar_sucesso(f"Modelo {modelo_nome} configurado com a chave {api_key[:4]}...{api_key[-4:]}.")
         return modelo
     except Exception as e:
@@ -584,9 +584,9 @@ def processar_texto_com_gemini(modelo, texto_original, prompt_base, retry_count=
             try:
                 # Garante que a API está configurada com a chave atual antes de cada chamada
                 # (Pode ser redundante se configurar_gemini_com_fallback já fez isso, mas garante)
-                genai.configure(api_key=api_key_usada)
+                genai.configure(api_key=api_key_usada) # type: ignore
                 # Recria o objeto do modelo para garantir que está usando a configuração correta
-                modelo_gemini_instancia = genai.GenerativeModel(modelo_atual.model_name)
+                modelo_gemini_instancia = genai.GenerativeModel(modelo_atual.model_name) # type: ignore
 
                 resposta = modelo_gemini_instancia.generate_content(prompt_completo)
                 
